@@ -1,0 +1,161 @@
+/* TKJ Service Hub - Custom CSS */
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #2b3445;
+}
+
+.bg-gradient-hero {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 50%, #0d2847 100%);
+}
+
+.text-primary-gradient {
+    background: linear-gradient(45deg, #3a86ff, #00f5d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.text-secondary-light {
+    color: #cbd5e1;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ======================================================
+   AI CUSTOMER ASSISTANT & FLOATING WIDGET STYLES
+   ====================================================== */
+.ai-chat-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1055;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.ai-widget-toggle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0d6efd 0%, #00f5d4 100%);
+    border: none;
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ai-widget-toggle:hover {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 14px 30px rgba(13, 110, 253, 0.5) !important;
+}
+
+.ai-widget-window {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: 390px;
+    max-width: calc(100vw - 32px);
+    height: 540px;
+    max-height: calc(100vh - 120px);
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    display: flex;
+    flex-direction: column;
+    z-index: 1055;
+    animation: aiSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18) !important;
+}
+
+@keyframes aiSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.ai-chip {
+    font-size: 0.76rem;
+    padding: 4px 10px;
+    transition: all 0.2s ease;
+    border-color: #cbd5e1;
+    color: #475569;
+    background: #ffffff;
+}
+
+.ai-chip:hover {
+    background: #0d6efd;
+    color: #ffffff;
+    border-color: #0d6efd;
+    transform: translateY(-1px);
+}
+
+.chat-bubble {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.chat-bubble.user-bubble {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    color: #ffffff;
+    border-bottom-right-radius: 4px !important;
+}
+
+.chat-bubble.ai-bubble {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+    border-bottom-left-radius: 4px !important;
+}
+
+.chat-bubble p:last-child {
+    margin-bottom: 0;
+}
+
+.chat-bubble strong {
+    color: #0f172a;
+}
+.user-bubble strong {
+    color: #ffffff;
+}
+

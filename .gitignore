@@ -1,0 +1,49 @@
+# ============================================================
+# TKJ Service Hub - .gitignore
+# ============================================================
+
+# Environment / secrets (NEVER commit)
+.env
+.env.local
+.env.*.local
+app/Config/env.local.php
+chatbot-node/.env
+chatbot-node/.env.local
+
+# Dependencies
+node_modules/
+chatbot-node/node_modules/
+vendor/
+
+# Logs, cache, temp, debug
+*.log
+*.tmp
+storage/
+logs/
+tmp/
+debug_*.txt
+
+# Backups (may contain DB dumps / secrets)
+backups/
+*.sql
+*.sql.gz
+*.dump
+
+# Database dumps
+database/*.sql.bak
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Uploads (user-generated content)
+public/uploads/
+uploads/
+
+# Build artifacts
+dist/
+build/
+*.map

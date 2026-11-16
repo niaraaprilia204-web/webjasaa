@@ -1,0 +1,21 @@
+{
+  "name": "tkj-service-hub-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internal Node.js AI bridge for TKJ Service Hub with HMAC authentication and OpenRouter integration.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "check:php": "node scripts/check-php.js",
+    "check:openrouter": "node scripts/check-openrouter.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0"
+  }
+}
